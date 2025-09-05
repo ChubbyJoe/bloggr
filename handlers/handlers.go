@@ -97,6 +97,7 @@ func LoginHandler(c *gin.Context) {
 		c.JSON(http.StatusUnauthorized, gin.H{
 			"error": "invalid credentials",
 		})
+		return
 	}
 
 	claims := jwt.MapClaims{
